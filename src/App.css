@@ -1,38 +1,111 @@
+/* App.css */
+
+/* Variables de color */
+:root {
+  --azul-oscuro: #3b5998; /* Cambiado a un tono de azul más suave */
+  --azul-claro: #3b5998; /* Mismo tono de azul más suave */
+  --blanco: #ffffff;
+  --negro: #333333;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--negro);
+  margin: 1;
+}
+
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 1rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto de cambio de color al pasar el ratón */
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente para mejorar la legibilidad */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.footer {
+  background-color: var(--azul-claro);
+  color: var(--blanco);
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  height: 100px; /* Ajusta el tamaño del logotipo según tus preferencias */
+  border-radius: 15px; /* Borde redondeado */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-container {
+  border-radius: 15%;
+  overflow: hidden; /* Esto evitará que la imagen se desborde del contenedor redondeado */
+} 
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--negro);
+  margin: 0;
+  background-image: url('./assets/Local.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace */
+}
+
+.main {
+  flex: 1;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente para mejorar la legibilidad */
+  border-radius: 8px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.image-gallery img {
+  max-width: 200px;
+  margin: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
